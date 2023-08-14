@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 * {
@@ -8,10 +13,12 @@ body {
 
 nav {
   height: 60px;
+  width: 100%;
   background: linear-gradient(90deg, #6f6af7 0%, #6f6af7 100%);
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 
 .common-class {
@@ -44,6 +51,7 @@ nav {
 .list p {
   font-size: 20px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .arrow_down {
@@ -75,4 +83,246 @@ nav {
   right: 8px;
   top: 26%;
   cursor: pointer;
+}
+
+main {
+  width: 85%;
+  height: 350px;
+  margin: auto;
+  margin-top: 130px;
+}
+
+.section {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section textarea {
+  display: block;
+  height: 100%;
+  width: 70%;
+  border: none;
+  resize: none;
+  background-color: #e5d8ff;
+  outline: none;
+  padding: 20px;
+  color: #6f7373;
+  font-size: 20px;
+  border-radius: 15px;
+  line-height: 2;
+  box-shadow: inset -5px -5px 10px 0px #dacef3, inset 5px 5px 10px 0px #dacef3;
+}
+
+.laptop_img {
+  height: 350px;
+  min-width: 23%;
+  /* object-fit: contain; */
+  vertical-align: middle;
+}
+
+.social {
+  width: 40px;
+  flex-direction: column;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+  float: right;
+  margin-top: -19%;
+}
+
+.social div {
+  width: 100%;
+  height: 40px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+.number-container {
+  width: 85%;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.number-container div {
+  width: 250px;
+  color: #ffffff;
+  font-size: 17px;
+  border-radius: 8px;
+  padding-left: 15px;
+  font-weight: 400;
+  line-height: 1;
+  box-shadow: -5px -5px 10px 0px #dacef3, 5px 5px 10px 0px #dacef3;
+}
+
+.question {
+  background-color: #929dff;
+}
+
+.answer {
+  background-color: #734cf2;
+}
+
+.participate {
+  background-color: #d288ff;
+}
+
+.passed {
+  background-color: #000000;
+}
+
+.profile-container {
+  width: 85%;
+  /* height: 450px; */
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  background-color: #483eff;
+  border-radius: 15px;
+  padding: 18px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-between;
+}
+
+.btnContainer button {
+  width: 300px;
+  height: 70px;
+  outline: none;
+  background: transparent;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1;
+  border: none;
+  border: 3px solid #ffffff;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: 0.7s all ease-in-out;
+}
+
+/* .btnContainer button:hover {
+  border: none;
+  background-color: #bce0f6;
+  color: #000000;
+} */
+
+.profile {
+  width: 70%;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  color: #435e83;
+  padding-top: 60px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.profile h2 {
+  margin: 0;
+  letter-spacing: 3px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.details {
+  margin-left: 20px;
+}
+
+.details strong {
+  display: inline-block;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-right: 4px;
+  width: 50px;
+}
+
+.details span {
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-left: 8px;
+}
+
+.profile button {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 7px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.profile button img {
+  width: 20px;
+  height: 14px;
+  margin-left: 6px;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.call-img {
+  position: fixed;
+  bottom: 0;
+  right: 6%;
+  z-index: 5;
+  width: 100px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.call-img:hover {
+  animation: shake 1s ease-in-out;
 }
